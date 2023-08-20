@@ -13,11 +13,16 @@ namespace Robot_vs_Dinosaur
         public int AttackPower; //number of health units to be subtracted from enemy when 
 
         /////Constructor/////
-        public Weapon(string type)
+        public Weapon(string type, int attackPower)
         {
             Type = type;
-            AttackPower = 10;
+            AttackPower = attackPower;
         }
+        //public Weapon(string type)
+        //{
+        //    Type = type;
+        //    AttackPower = 10;
+        //}
 
 
         /////Member Methods (can do...)/////    

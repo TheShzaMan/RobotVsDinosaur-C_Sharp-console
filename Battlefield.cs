@@ -13,15 +13,15 @@ namespace Robot_vs_Dinosaur
         public Dinosaur ActiveDino;
         public Robot ActiveRobot;
         public Weapon ActiveWeapon;
-        public Hangar MyHangar;
-        public TriassicPark MyPark;
+        public Fleet Hangar;
+        public Herd TriassicPark;
         
         //Constructor
 
-        public Battlefield(TriassicPark myPark, Hangar myHangar)
+        public Battlefield(Herd triassicPark, Fleet hangar)
         {
-            MyPark = myPark;
-            MyHangar = myHangar;
+            TriassicPark = triassicPark;
+            Hangar = hangar;
         }
 
         //Member Methods (can do...)  
@@ -32,16 +32,16 @@ namespace Robot_vs_Dinosaur
 
         public void SelectFighters()
         {
-            ActiveDino = MyPark.ChooseDinosaur();
-            ActiveRobot = MyHangar.ChooseRobot();
+            ActiveDino = TriassicPark.ChooseDinosaur();
+            ActiveRobot = Hangar.ChooseRobot();
             ActiveWeapon = ActiveRobot.SelectWeapon(ActiveRobot);
 
             Console.WriteLine($"\nLadies and gentlemen, for tonight's battle, we have...\n" +
                 $"Fighting for the Robots...\n");
-            MyHangar.DisplayStats(ActiveRobot);
-            Console.WriteLine($"\n\n and for the dinosaurs...\n");
-            MyPark.DisplayStats(ActiveDino);
-            Console.WriteLine($"\nHERE WE GO!!!   ...press enter");
+            Hangar.DisplayStats(ActiveRobot);
+            Console.WriteLine($"\n\n and for the Dinosaurs...\n");
+            TriassicPark.DisplayStats(ActiveDino);
+            Console.WriteLine($"\nHERE WE GO!!!   ...press enter");Console.ReadLine();
 
         }
         public void BattleSequence()
@@ -71,13 +71,13 @@ namespace Robot_vs_Dinosaur
         {
             if (ActiveRobot.Health == 0)
             {
-                Console.WriteLine($"Wow!! What a fight!!  The winner is...\n" +
-                $"{ActiveDino.Name}");
+                Console.WriteLine($"\nWow!! What a fight!!  The winner is...\n" +
+                $"\n{ActiveDino.Name} for the Dinosaurs!!");
             }
             else
             {
-                Console.WriteLine($"Wow!! What a fight!!  The winner is...\n" +
-                    $"{ActiveRobot.Name}");
+                Console.WriteLine($"\nWow!! What a fight!!  The winner is...\n" +
+                    $"\n{ActiveRobot.Name} for the Robots!!");
             }
         }
 

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Robot_vs_Dinosaur
 {
-    internal class Hangar
+    internal class Fleet
     {
         public Robot RobotOne; 
         public Robot RobotTwo; 
         public Robot RobotThree;
         public Robot[] Inventory;
         
-        public Hangar(Robot one, Robot two, Robot three)
+        public Fleet(Robot one, Robot two, Robot three)
         {
             RobotOne = one;
             RobotTwo = two;
@@ -61,7 +61,7 @@ namespace Robot_vs_Dinosaur
         public void DisplayStats(Robot activeRobot)
         {
 
-            Console.WriteLine($"{activeRobot.Name}\nWeapon: {activeRobot.ActiveWeapon.Type}\nHealth: {activeRobot.Health}\n"); 
+            Console.WriteLine($"{activeRobot.Name}\nWeapon: {activeRobot.ActiveWeapon.Type} -> 20\nHealth: {activeRobot.Health}\n"); 
 
         }
     }

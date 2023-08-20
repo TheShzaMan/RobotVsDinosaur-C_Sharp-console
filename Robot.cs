@@ -24,13 +24,14 @@ namespace Robot_vs_Dinosaur
         public void Attack(Dinosaur dinosaur)
         {
             dinosaur.Health -= ActiveWeapon.AttackPower;
-            Console.WriteLine($"\n{Name} activates {ActiveWeapon.Type} and attacks {dinosaur.Name}! {dinosaur.Name}'s health drops to {dinosaur.Health}%");
+            Console.WriteLine($"\n{Name} activates {ActiveWeapon.Type} and attacks {dinosaur.Name}! {dinosaur.Name}'s health drops by {ActiveWeapon.AttackPower} and is now down to {dinosaur.Health}%");
         }
         public Weapon SelectWeapon(Robot robot)
         {
-            Weapon weapon1 = new Weapon("Laser Stare");
-            Weapon weapon2 = new Weapon("Plasma Blade");
-            Weapon[] weapons = { weapon1, weapon2 };
+            Weapon weapon1 = new Weapon("Laser Stare", 20);
+            Weapon weapon2 = new Weapon("Plasma Blade", 20);
+            Weapon weapon3 = new Weapon("Sonic Pulse Grenades", 20);
+            Weapon[] weapons = { weapon1, weapon2, weapon3 };
             
             int weaponSelection;
             Console.WriteLine($"\nSelect your robot's weapon:\n");
@@ -49,7 +50,8 @@ namespace Robot_vs_Dinosaur
                 isInt = Int32.TryParse(Console.ReadLine(), out weaponSelection);
             }
             Weapon activeWeapon = weapons[weaponSelection - 1];
-            Console.WriteLine($"\nYou have equiped {robot.Name} with {activeWeapon.Type}\n");
+            Console.WriteLine($"\nYou have equiped {robot.Name} with {activeWeapon.Type}\n" +
+                $"press enter...");Console.ReadLine();
             ActiveWeapon = activeWeapon;
             return activeWeapon;
             
