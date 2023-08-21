@@ -18,12 +18,6 @@ namespace Robot_vs_Dinosaur
             Type = type;
             AttackPower = attackPower;
         }
-        //public Weapon(string type)
-        //{
-        //    Type = type;
-        //    AttackPower = 10;
-        //}
-
 
         /////Member Methods (can do...)/////    
     }

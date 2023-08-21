@@ -11,7 +11,7 @@ namespace Robot_vs_Dinosaur
         //Member Variables (Has a...)
         public string Name;
         public int Health;
-        public int AttackPower;   //number of health units subtracted from enemy health when used
+        public int AttackPower;   
         public string AttackType1;
         public string AttackType2;
         public Random rndm;

@@ -20,13 +20,8 @@ namespace Robot_vs_Dinosaur
             DinoTwo = dinoTwo;
             DinoThree = dinoThree;
             Dinosaurs = new Dinosaur[] {DinoOne, DinoTwo, DinoThree};
-            
         }
 
-        //public void AddDinosaur(Dinosaur dinosaur)
-        //{
-
-        //}
         public Dinosaur ChooseDinosaur()
         {
             int dinoSelection;
@@ -50,9 +45,7 @@ namespace Robot_vs_Dinosaur
         }
         public void DisplayStats(Dinosaur activeDino)
         {
-            
             Console.WriteLine($"{activeDino.Name}\nAttacks: Power Smash -> 10, Razor Claws -> 30\nHealth: {activeDino.Health}\n");
-
         }
     }
 }

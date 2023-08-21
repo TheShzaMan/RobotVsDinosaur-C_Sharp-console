@@ -12,7 +12,6 @@ namespace Robot_vs_Dinosaur
         public Robot RobotTwo; 
         public Robot RobotThree;
         public Robot[] Inventory;
-        
         public Fleet(Robot one, Robot two, Robot three)
         {
             RobotOne = one;
@@ -41,28 +40,10 @@ namespace Robot_vs_Dinosaur
             Robot activeRobot = Inventory[roboSelection - 1];
             Console.WriteLine($"\nExcelent! You've chosen {activeRobot.Name} as your Robot");
             return activeRobot;
-            //int robotSelection;
-            //Console.WriteLine($"Choose your Robot fighter:\n");
-            //for (int i = 0; i < Inventory.Length; i++)
-            //{
-            //    Console.WriteLine($"{1 + i}. {Inventory[i]}\n");
-            //}
-            //bool isInt = false;
-            //isInt = Int32.TryParse(Console.ReadLine(), out robotSelection);
-            
-            //while (isInt == false || robotSelection >= Inventory.Length)
-            //{
-            //    Console.WriteLine("Invalid Selection.  Please enter number.");
-            //    isInt = Int32.TryParse(Console.ReadLine(), out robotSelection);
-            //}
-            //Robot activeRobot = Inventory[robotSelection - 1];
-            //return activeRobot;
         }
         public void DisplayStats(Robot activeRobot)
         {
-
             Console.WriteLine($"{activeRobot.Name}\nWeapon: {activeRobot.ActiveWeapon.Type} -> 20\nHealth: {activeRobot.Health}\n"); 
-
         }
     }
 }

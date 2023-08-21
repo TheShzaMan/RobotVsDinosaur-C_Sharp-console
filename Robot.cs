@@ -17,7 +17,6 @@ namespace Robot_vs_Dinosaur
         {
             Name = name;
             Health = 100;
-            
         }
 
         //Member Methods (can do...)  

@@ -15,9 +15,7 @@ namespace Robot_vs_Dinosaur
         public Weapon ActiveWeapon;
         public Fleet Hangar;
         public Herd TriassicPark;
-        
         //Constructor
-
         public Battlefield(Herd triassicPark, Fleet hangar)
         {
             TriassicPark = triassicPark;
@@ -59,13 +57,6 @@ namespace Robot_vs_Dinosaur
                 //}
                 ActiveRobot.Attack(ActiveDino);
             }
-            
-            //dinoFighter attack roboFighter;
-            //display roboFighter health
-            //roboFighter attack dinoFighter
-            //display dinoFighter health
-            //loop this ^ until fighter has 0 health
-            //inform of death
         }
         public void AnnounceWinner()
         {
@@ -90,10 +81,7 @@ namespace Robot_vs_Dinosaur
             BattleSequence();
             
             AnnounceWinner();
-            
-
         }
-    
     }
 }
 
